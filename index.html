@@ -1,21 +1,26 @@
+ <!--Laboratory Activity #8
+ VALERIO, Arabella S.  BSIT 3A -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Connected Files Example</title>
-
-    <!-- Link CSS -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laboratory Activity 8 - Interactive Quiz</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <h1>JavaScript Interactive Quiz</h1>
+  <div id="quiz-container">
+    <p id="question"></p>
 
-    <h1>Hello, World!</h1>
-    <p>This is a simple project with connected HTML, CSS, and JS.</p>
+    <input type="text" id="answer" placeholder="Enter your answer here" />
+    <button id="submitBtn" onclick="checkAnswer()">Submit</button>
 
-    <button id="colorBtn">Change Background Color</button>
+    <p id="feedback"></p>
+    <p id="score"></p>
+  </div>
 
-    <!-- Link JavaScript -->
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
