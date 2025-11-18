@@ -2,8 +2,9 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f7f8fc;
   text-align: center;
-  padding: 50px;
+  padding: 20px;
   color: #000000;
+  margin: 0;
 }
 
 h1 {
@@ -15,20 +16,22 @@ h1 {
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 400px;
+  width: 90%;              /* Makes it flexible on mobile */
+  max-width: 400px;        /* Keeps your original size on desktop */
   margin: auto;
 }
 
 input {
-  padding: 8px;
+  padding: 10px;
   margin-top: 10px;
-  width: 80%;
+  width: 100%;             /* Full width on mobile */
+  box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
 button {
-  padding: 8px 15px;
+  padding: 12px 15px;
   margin-top: 10px;
   cursor: pointer;
   background-color: #ff008c;
@@ -36,6 +39,9 @@ button {
   border: none;
   border-radius: 5px;
   transition: background 0.3s;
+  width: 100%;             /* Makes buttons easier to press on mobile */
+  box-sizing: border-box;
+  font-size: 16px;
 }
 
 button:hover {
@@ -51,4 +57,27 @@ button:hover {
   margin-top: 10px;
   font-style: italic;
   color: #7f8c8d;
+}
+
+/* 📱 Mobile adjustments */
+@media (max-width: 480px) {
+  body {
+    padding: 15px;
+  }
+
+  #quiz-container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  button {
+    font-size: 15px;
+  }
+
+  input {
+    font-size: 15px;
+  }
 }
